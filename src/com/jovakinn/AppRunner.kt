@@ -13,5 +13,9 @@ fun main(args: Array<String>){
         execute.representUser(execute)
         execute.getFavouriteFilms(execute)
         execute.getOSPreferences(execute)
-        execute.factorial(execute.age)
+        println(execute.factorial(execute.age.toLong()))
+
+
+        val comb = Combinations()
+        comb.aCombination(7, 6)
 }
