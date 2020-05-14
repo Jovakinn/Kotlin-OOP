@@ -1,7 +1,9 @@
 package com.jovakinn.Service
 
 open class Factorial {
-    fun factorial(num: Long): Long{
+
+    fun factorial(num: Long): Long {
+
         var i = 1
         var factorial: Long = 1
         while (i <= num) {
@@ -9,5 +11,6 @@ open class Factorial {
             i++
         }
         return factorial
+
     }
 }

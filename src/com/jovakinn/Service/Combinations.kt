@@ -1,9 +1,5 @@
 package com.jovakinn.Service
 
-/*
-    Work in progress...K
- */
-
 data class Combinations(val n: Long? = null,
                         val k: Long? = null): Factorial() {
     val fac: Factorial = Factorial()
@@ -14,29 +10,21 @@ data class Combinations(val n: Long? = null,
     }
 
     fun aCombination(n: Long, k: Long){
-        val nFac = fac.factorial(n).toString()
+        val nFac = fac.factorial(n)
         val nMinusK: Long = (n - k)
-        val nMinusKfacA = fac.factorial(nMinusK).toString()
+        val nMinusKfacA = fac.factorial(nMinusK)
 
-        val res: String = (nFac.toLong() /
-                nMinusKfacA.toLong())
-                .toString()
+        val res = nFac / nMinusKfacA
         println(res)
     }
 
     fun cCombination(n: Long, k: Long){
-        val nFac = fac.factorial(n).toString()
-        val kFac = fac.factorial(k).toString()
-        val nMinusK: Long = n-k
+        val nFac = fac.factorial(n)
+        val kFac = fac.factorial(k)
+        val nMinusK: Long = (n - k)
+        val nMinusKfacC = fac.factorial(nMinusK)
 
-        val nMinusKfac = fac.factorial(nMinusK)
-            .toString()
-
-        val res: String = (nFac.toLong() /
-                nMinusKfac.toLong() * kFac.toLong())
-                .toString()
+        val res = (nFac / (nMinusKfacC * kFac))
         println(res)
     }
-
-
 }
