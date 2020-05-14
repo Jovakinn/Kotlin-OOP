@@ -12,11 +12,4 @@ class ExecutorClass(
     gendre: GENDRE,
     favouriteFilm: FILMS,
     favouriteOS: OS
-) : User(login, password, age, gendre, favouriteFilm, favouriteOS) {
-    fun calcFactorialOfAge (age: Int) {
-        for (i in age downTo 0 step 1){
-            val res: Int = i * (i-1)
-            println(res)
-        }
-    }
-}
+) : User(login, password, age, gendre, favouriteFilm, favouriteOS)

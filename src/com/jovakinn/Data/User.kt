@@ -3,13 +3,15 @@ package com.jovakinn.Data
 import com.jovakinn.Data.enums.GENDRE
 import com.jovakinn.Data.enums.OS
 import com.jovakinn.Interfaces.TypesOfEntities
+import com.jovakinn.Service.Factorial
 import com.jovakinnk.Data.enums.FILMS
 
-open class User (val login: String = "hello",
-                 val password: String,
-                 val age: Int, val gendre: GENDRE,
-                 val favouriteFilm: FILMS,
-                 val favouriteOS: OS) : TypesOfEntities {
+open class User (
+    private val login: String = "hello",
+    private val password: String,
+    val age: Int, private val gendre: GENDRE,
+    private val favouriteFilm: FILMS,
+    private val favouriteOS: OS) : TypesOfEntities, Factorial() {
 
     override fun representUser(user: User) {
         println("Login: ${user.login}")
